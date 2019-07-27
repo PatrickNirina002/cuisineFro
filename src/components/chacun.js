@@ -16,7 +16,7 @@ export default class Chacun extends Component {
   
 
     componentDidMount() {
-        axios.get('http://metyza-cuisine.herokuapp.com'+this.props.location.pathname)
+        axios.get('https://metyza-cuisine.herokuapp.com'+this.props.location.pathname)
             .then(response => {
                 console.log(response.data);
                 this.setState({ profil: response.data });
@@ -52,7 +52,7 @@ export default class Chacun extends Component {
       localStorage.setItem('atelier',obj._id);
       
   }}><center>{obj.titre}</center> </h4>
-  <img width="100%" height="300px" src={'http://metyza-cuisine.herokuapp.com/user/'+obj.image} alt="pdp" />
+  <img width="100%" height="300px" src={'https://metyza-cuisine.herokuapp.com/user/'+obj.image} alt="pdp" />
   <p class="card-text">Description: {obj.description}</p>
   <p class="card-text">Date: {obj.date}</p>
   <p class="card-text">Horaire de debut: {obj.debut}</p>
@@ -73,7 +73,7 @@ console.log(obj.visibilite);
      
   {obj.visibilite===true ?(<button onClick={(e)=>{
              e.preventDefault()
-            axios.get(" http://metyza-cuisine.herokuapp.com/masquer/"+obj._id).then(res=>{
+            axios.get("https://metyza-cuisine.herokuapp.com/masquer/"+obj._id).then(res=>{
                  axios.get('http://metyza-cuisine.herokuapp.com/register/'+ localStorage.getItem('id')).then(res=>{
             console.log(res.data)
             this.setState({profil:res.data})
@@ -84,8 +84,8 @@ console.log(obj.visibilite);
          }} className="btn btn-danger">Desactiver</button>):(<button onClick={(e)=>{
             e.preventDefault()
             console.log(obj._id)
-           axios.get("http://metyza-cuisine.herokuapp.com/affichier/"+obj._id).then(res=>{
-  axios.get('http://metyza-cuisine.herokuapp.com/register/'+ localStorage.getItem('id')).then(res=>{
+           axios.get("https://metyza-cuisine.herokuapp.com/affichier/"+obj._id).then(res=>{
+  axios.get('https://metyza-cuisine.herokuapp.com/register/'+ localStorage.getItem('id')).then(res=>{
             console.log(res.data)
             this.setState({profil:res.data})
         })

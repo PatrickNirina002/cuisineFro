@@ -12,7 +12,7 @@ export default class Home extends Component {
 
     }
     componentDidMount() {
-        axios.get('http://metyza-cuisine.herokuapp.com/affichertous')
+        axios.get('https://metyza-cuisine.herokuapp.com/affichertous')
             .then(response => {
                 console.log(response.data);
                 this.setState({ profil: response.data });
@@ -44,7 +44,7 @@ export default class Home extends Component {
 
   
   <h4 class="card-title" id="titrebe"><center>{obj.titre}</center> </h4>
-  <div className="container"><img width="90%" height="300px" src={'http://metyza-cuisine.herokuapp.com/user/'+obj.image} alt="pdp" /></div>
+  <div className="container"><img width="90%" height="300px" src={'https://metyza-cuisine.herokuapp.com/user/'+obj.image} alt="pdp" /></div>
   <p class="card-text"><span>Description:</span> {obj.description}</p>
   <p class="card-text"><span>Date:</span>{obj.date}</p>
   <p class="card-text"><span>Horaire de debut:</span>{obj.debut}</p>
