@@ -23,6 +23,8 @@ export const loginUser = (user) => dispatch => {
                 localStorage.setItem('id', res.data.id);
                  console.log(res.data);
                  localStorage.setItem('anarana',res.data.name)
+                 
+                 
                 console.log(res.data.name);
                 
                 setAuthToken(token);
