@@ -11,7 +11,7 @@ export default class ListTous extends Component {
 
     }
     componentDidMount() {
-        axios.get('http://metyza-cuisine.herokuapp.com/affichertous')
+        axios.get('https://metyza-cuisine.herokuapp.com/affichertous')
             .then(response => {
                 console.log(response.data._id);
                 this.setState({ profil: response.data });
@@ -44,7 +44,7 @@ export default class ListTous extends Component {
 
   
   <h4 class="card-title">{obj.titre}</h4>
-  <img className='imag' src={'http://metyza-cuisine.herokuapp.com/user/'+obj.image} alt="pdp" />
+  <img className='imag' src={'https://metyza-cuisine.herokuapp.com/user/'+obj.image} alt="pdp" />
   <p class="card-text">{obj.description}</p>
   <a  class="btn btn-primary">{obj.date}</a><br/>
   <a data-toggle="tooltip" data-placement="top" title="Add to Cart">  <i class="fas fa-shopping-cart grey-text ml-3"></i> </a>

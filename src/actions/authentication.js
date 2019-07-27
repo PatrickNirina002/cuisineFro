@@ -4,7 +4,7 @@ import setAuthToken from '../setAuthToken';
 import jwt_decode from 'jwt-decode';
 
 export const registerUser = (user, history) => dispatch => {
-    axios.post('http://metyza-cuisine.herokuapp.com/register', user)
+    axios.post('https://metyza-cuisine.herokuapp.com/register', user)
             .then(res =>  history.push('/login')
                 )
             .catch(err => {
@@ -16,7 +16,7 @@ export const registerUser = (user, history) => dispatch => {
 }
 
 export const loginUser = (user) => dispatch => {
-    axios.post('http://metyza-cuisine.herokuapp.com/login', user)
+    axios.post('https://metyza-cuisine.herokuapp.com/login', user)
             .then(res => {
                 const { token } = res.data;
                 localStorage.setItem('jwtToken', token);

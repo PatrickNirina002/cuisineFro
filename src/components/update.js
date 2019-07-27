@@ -54,12 +54,12 @@ class Modifier extends React.Component {
     data.append('place_dispo',this.state.place_dispo);
     data.append('place_reserve',this.state.place_reserve);
     data.append('prix',this.state.prix);
-    fetch('http://metyza-cuisine.herokuapp.com/profil/'+this.props.match.params._id, {
+    fetch('https://metyza-cuisine.herokuapp.com/profil/'+this.props.match.params._id, {
       method: 'PUT',
       body: data,
     }).then((response) => {
       response.json().then((body) => {
-        this.setState({ image: `http://metyza-cuisine.herokuapp.com/profil/${body.image}` });
+        this.setState({ image: `https://metyza-cuisine.herokuapp.com/profil/${body.image}` });
         console.log('ity ilay body.fil',body.image);
        
       });
