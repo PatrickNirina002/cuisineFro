@@ -113,9 +113,9 @@ class Navbar extends Component {
 <div class="col-lg-2 col-md-2 col-sm-3 col-xs-12" id ="aaa">
 
     <ul className="midina" >
-        <li><Link href="" to='/bienvenue' className='sac'><i class="fa fa-dashboard" ></i> Dashboard</Link></li><br/><br/>
-        <li><Link to={"/atelier"}  className='sac'><i class="fa fa-tags"></i> Ajouter de l'atelier</Link></li><br/><br/>
-        <li><Link to={"/register/"+localStorage.getItem('id')} className='sac'><i class="fa fa-history"></i> Liste de l'atelier</Link></li><br/><br/>
+        <Link href="" to='/bienvenue' className='sac'> Dashboard</Link><br/><br/>
+        <Link to={"/atelier"}  className='sac'>Ajouter de l'atelier</Link><br/><br/>
+        <Link to={"/register/"+localStorage.getItem('id')} className='sac'> Liste de l'atelier</Link><br/><br/>
         {/* <li><a href="a"><i class="fa fa-lock"></i> Change Password</a></li><br/><br/> */}
 
     </ul>
@@ -138,7 +138,7 @@ class Navbar extends Component {
             
         // </ul>
         <div>
-       
+       <div>
    <MDBNavbar  color="default-color" dark expand="md" id="eto">
             
    <MDBNavbarToggler onClick={this.toggleCollapse} />
@@ -165,8 +165,8 @@ class Navbar extends Component {
      </MDBNavbarNav>
    </MDBCollapse>
  </MDBNavbar>
- 
-   <Slider/>
+ </div>
+  <div className="slider"><Slider/></div> 
    </div>
 
       )

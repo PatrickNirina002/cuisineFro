@@ -62,7 +62,7 @@ export default class Chacun extends Component {
   <p class="card-text" onClick={()=>{
 console.log(obj.visibilite);
 
-  }}>Prix: {obj.prix}</p>
+  }}>Prix: {obj.prix}$</p>
   <div className='row'>
       <div className='col-md-6'>
   <Link to={'/profil/'+obj._id} className="btn btn-primary">Edit</Link></div>
