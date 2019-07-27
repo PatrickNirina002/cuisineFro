@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 //import './Home.css';
-import volo from './pa.jpeg';
-import de from './pizza.jpeg';
-// import telo from './efatra.jpeg'
+import volo from './bureau.jpeg';
+import de from './ato3.jpeg';
+// import telo from './bureau.jpeg'
 import { Animation, MDBCarousel, MDBCarouselCaption, MDBCarouselInner, MDBCarouselItem, MDBView, MDBMask } from
 "mdbreact";
 

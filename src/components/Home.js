@@ -51,7 +51,7 @@ export default class Home extends Component {
   <p class="card-text"><span>Durée:</span> {obj.dure}</p>
   <p class="card-text"><span>Nombre de place disponible:</span>{obj.place_dispo}</p>
   <p class="card-text"><span>Nombre de place reserve:</span> {obj.place_reserve}</p>
-  <p class="card-text"><span>Prix:</span> {obj.prix}</p>
+  <p class="card-text"><span>Prix:</span> {obj.prix}<span>$</span></p>
   <Link className="btn btn-primary" to={"/particulier/"+obj._id} onClick={()=>{
       console.log(obj.id2);
       localStorage.setItem('ti',obj._id)
