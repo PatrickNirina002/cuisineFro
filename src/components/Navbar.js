@@ -113,9 +113,9 @@ class Navbar extends Component {
 <div class="col-lg-2 col-md-2 col-sm-3 col-xs-12" id ="aaa">
 
     <ul className="midina" >
-        <Link  to='/admin' className='sac'> A propos</Link><br/><br/>
+        <Link  to='/bienvenue' className='sac'> A propos</Link><br/><br/>
         <Link to={"/atelier"}  className='sac'>Ajouter de l'atelier</Link><br/><br/>
-        <Link to={"/register/"+localStorage.getItem('id')} className='sac'> Liste de l'atelier</Link><br/><br/>
+        <Link to={"/register/"+localStorage.getItem('id')} className='sac'> Liste des ateliers</Link><br/><br/>
         {/* <li><a href="a"><i class="fa fa-lock"></i> Change Password</a></li><br/><br/> */}
 
     </ul>
