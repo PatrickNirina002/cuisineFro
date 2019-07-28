@@ -170,11 +170,12 @@ label{
   height: 90px !important;
 }
 h3{
-  font-family: Verdana !important;
+  font-family: "Roboto" !important;
  font-weight: bold;
   color:white !important;
   font-size: 40px !important;
 }
+
 .midina{
   margin-top: 280px !important;
 }
@@ -185,10 +186,12 @@ font-size: 15px !important;
 border-radius: 10px !important;
 }
 #titrebe{
+  font-family: "Roboto" !important;
   font-size: 20px !important;
 }
 #nafafy{
-  font-size: 20px !important;
+  font-size: 50px !important;
+  font-family: verdana;
 }
 .bou{
   height: 80px;
@@ -199,4 +202,16 @@ border-radius: 10px !important;
 }
 .slider{
   margin-top: -30px;
+}
+#metykosa{
+  background-color: #f3671f !important;
+  width: 50px;
+  line-height: 27px;
+}
+.carde{
+  margin-top:20px;
+}
+.nom{
+  color: #f3671f !important;
+  font-size:60px !important;
 }

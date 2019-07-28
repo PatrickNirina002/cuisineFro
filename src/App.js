@@ -17,6 +17,7 @@ import Inscrire from './components/inscrire';
 import Modifier from './components/update';
 import FooterPage from './components/footer';
 import Bienvenue from './components/bienvenue';
+import PrivateRoute from './components/cahe';
 // import Slider from './components/slider'
 //import Admin from './components/Admin';
 if(localStorage.jwtToken) {
@@ -39,15 +40,15 @@ class App extends Component {
             <div>
               <Navbar />
              
-                <Route exact path="/client" component={ Home } />
+                <Route exact path="/" component={ Home } />
                 <div className="container">
                   <Route exact path="/register" component={ Register } />
                   <Route exact path="/login" component={ Login } />
                   <Route exact path="/atelier" component={ PostFrontToBack } />
                   <Route exact path="/register/:_id" component={ Chacun } />
-                  <Route path="/particulier/:_id"  component={Inscrire} ></Route>
-                  <Route path="/profil/:_id"  component={Modifier} ></Route>
-                  <Route path="/bienvenue"  component={Bienvenue} ></Route>
+                  <Route path="/particulier/:_id"  component={Inscrire} />
+                  <PrivateRoute path="/profil/:_id"  component={Modifier} />
+                  <PrivateRoute path="/admin"  component={Bienvenue} />
                   {/* <Route path="/dash"  component={Admin} ></Route> */}
                 </div>
                 <FooterPage/>
