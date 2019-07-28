@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 
-class Bienvenue extends Component {
+class Vide extends Component {
     render() {
         return (
-            <div id="nafafy">
-               
+            <div>
+                
             </div>
         );
     }
 }
 
-export default Bienvenue;
+export default Vide;

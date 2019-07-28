@@ -17,6 +17,7 @@ import Inscrire from './components/inscrire';
 import Modifier from './components/update';
 import FooterPage from './components/footer';
 import Bienvenue from './components/bienvenue';
+import Vide from './components/bienvenue';
 import PrivateRoute from './components/cahe';
 // import Slider from './components/slider'
 //import Admin from './components/Admin';
@@ -45,10 +46,16 @@ class App extends Component {
                   <Route exact path="/register" component={ Register } />
                   <Route exact path="/login" component={ Login } />
                   <Route exact path="/atelier" component={ PostFrontToBack } />
-                  <Route exact path="/register/:_id" component={ Chacun } />
+                  
                   <Route path="/particulier/:_id"  component={Inscrire} />
-                  <PrivateRoute path="/profil/:_id"  component={Modifier} />
-                  <PrivateRoute path="/admin"  component={Bienvenue} />
+                  <Route path="/profil/:_id"  component={Modifier} />
+                  <Route exact path="/register/:_id" component={ Chacun } />
+                  <Route exact path="/bienvenue"  component={Vide} />
+                  <switch>
+                    <PrivateRoute exact path="/admin"  component={Vide} />
+                    
+                  </switch>
+                   
                   {/* <Route path="/dash"  component={Admin} ></Route> */}
                 </div>
                 <FooterPage/>
