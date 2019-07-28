@@ -65,7 +65,7 @@ console.log(obj.visibilite);
   }}>Prix: {obj.prix}$</p>
   <div className='row'>
       <div className='col-md-6'>
-  <Link to={'/profil/'+obj._id} className="btn btn-primary">Edit</Link></div>
+  <Link to={'/profil/'+obj._id} className="btn btn-primary" id="metykosa">Edit</Link></div>
 
 
   <div>

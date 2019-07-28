@@ -1,5 +1,7 @@
 
 import React from 'react';
+import { confirmAlert } from 'react-confirm-alert'; // Import
+import 'react-confirm-alert/src/react-confirm-alert.css';
 
 class PostFrontToBack extends React.Component {
   constructor(props) {
@@ -64,17 +66,6 @@ class PostFrontToBack extends React.Component {
        
       });
     });
-    this.setState({
-      titre: '',
-      description:'',
-       date:'',
-       debut:'',
-       dure:'',
-       place_dispo:'',
-      place_reserve:'',
-      prix:'',
-       image:''
-    })
     
   }
 
@@ -88,60 +79,74 @@ class PostFrontToBack extends React.Component {
         className="form-control"
           value={this.state.value}
           onChange={this.onChange}
-          name="titre"  required/><br></br></div>
+          name="titre"  /><br></br></div>
           <div className="form-group">
           <label>Description:</label>
         <input type="textarea" id='champ'
         className="form-control"
           value={this.state.value}
           onChange={this.onChange}
-          name="description"  required/><br></br></div>
+          name="description"  /><br></br></div>
           <div className="form-group">
         <label>date:</label>
         <input type="date" id='champ'
         className="form-control"
           value={this.state.value}
           onChange={this.onChange}
-          name="date"  required/><br></br> </div>
+          name="date"  /><br></br> </div>
           <div className="form-group">
           <label>Debut:</label>
         <input type="time" id='champ'
         className="form-control"
           value={this.state.value}
           onChange={this.onChange}
-          name="debut"  required/><br></br> </div>
+          name="debut"  /><br></br> </div>
           <div className="form-group">
           <label>Durée:</label>
         <input type="time" id='champ'
         className="form-control"
           value={this.state.value}
           onChange={this.onChange}
-          name="dure"  required/><br></br>  </div>
+          name="dure"  /><br></br>  </div>
           <div className="form-group"></div> 
           <label>Nombre de place disponible:</label>
         <input type="text" id='champ'
         className="form-control"
           value={this.state.value}
           onChange={this.onChange}
-          name="place_dispo" required/><br></br> 
+          name="place_dispo" /><br></br> 
           <div className="form-group">
           <label>Nombre de place reservée:</label>
         <input type="text" id='champ'
         className="form-control"
           value={this.state.value}
           onChange={this.onChange}
-          name="place_reserve"   required/><br></br> </div> 
+          name="place_reserve"   /><br></br> </div> 
           <div className="form-group"> 
           <label>Prix:</label>
         <input type="text" id='champ'
         className="form-control"
           value={this.state.value}
           onChange={this.onChange}
-          name="prix"  required/><br></br>   </div> 
+          name="prix" /><br></br>   </div> 
       
           <input id='champ' ref={(ref) => { this.uploadInput = ref; }} type="file" name="image"/>
        
-          <input type="submit" class="fadeIn fourth" value="Ajouter" className='bou'/>
+          <input type="submit" class="fadeIn fourth"   
+           onClick={() => {
+            confirmAlert({
+              customUI: () => {
+                return (
+                  <div className='custom-ui'>
+                    <h1>Cliquer ok pour que ton atelier sera ajouter </h1>
+                    <center></center><a href="/admin" id="okajout" className="btn btn-primary">OK</a>
+                  </div>
+                );
+              }
+            });
+          }} type="submit" id="ajouter_boutton"
+           
+           value="Ajouter" className='bou'/>
       </form>
     );
   }
